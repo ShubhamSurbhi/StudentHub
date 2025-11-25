@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StudentHub</title>
+    <link rel="stylesheet" href="studenthub.css">
+</head>
+<body>
+
+<header>
+    <h2>StudentHub</h2>
+</header>
+
+<div class="nav">
+    <div onclick="showSection('students')">Students</div>
+    <div onclick="showSection('attendance')">Attendance</div>
+    <div onclick="showSection('marks')">Internal Marks</div>
+    <div onclick="showSection('assignments')">Assignments</div>
+    <div onclick="showSection('notices')">Notices</div>
+    <div onclick="showSection('timetable')">Time Table</div>
+    <div onclick="showSection('materials')">Study Materials</div>
+</div>
+
+<!-- STUDENTS SECTION -->
+<div class="container section" id="students">
+    <h3>Add Student</h3>
+    <input id="sname" placeholder="Name" />
+    <input id="sroll" placeholder="Roll No" />
+    <input id="scourse" placeholder="Course" />
+    <button onclick="addStudent()">Add Student</button>
+
+    <h3>Students List</h3>
+    <table>
+        <thead>
+            <tr><th>Name</th><th>Course</th></tr>
+        </thead>
+        <tbody id="studentTable"></tbody>
+    </table>
+</div>
+
+<!-- ATTENDANCE SECTION -->
+<div class="container section" id="attendance">
+    <h3>Record Attendance</h3>
+    <input id="aname" placeholder="Student Name" />
+    <input id="aroll" placeholder="Roll No" />
+    <input id="astatus" placeholder="Present / Absent" />
+    <button onclick="addAttendance()">Add Attendance</button>
+
+    <table>
+        <thead><tr><th>Name</th><th>Status</th></tr></thead>
+        <tbody id="attendanceTable"></tbody>
+    </table>
+</div>
+
+<!-- INTERNAL MARKS SECTION -->
+<div class="container section" id="marks">
+    <h3>Add Internal Marks</h3>
+    <input id="mname" placeholder="Student Name" />
+    <input id="mroll" placeholder="Roll No" />
+    <input id="msub" placeholder="Subject" />
+    <input id="mmark" placeholder="Marks" />
+    <button onclick="addMarks()">Add Marks</button>
+
+    <table>
+        <thead><tr><th>Name</th><th>Subject</th><th>Marks</th></tr></thead>
+        <tbody id="marksTable"></tbody>
+    </table>
+</div>
+
+<!-- ASSIGNMENTS SECTION -->
+<div class="container section" id="assignments">
+    <h3>Add Assignment</h3>
+    <input id="asub" placeholder="Subject Name" />
+    <input id="acode" placeholder="subject code" />
+    <input id="atitle" placeholder="Assignment Title" />
+    <textarea id="adesc" placeholder="Description"></textarea>
+    <button onclick="addAssignment()">Add Assignment</button>
+
+    <ul id="assignmentList"></ul>
+</div>
+
+<!-- NOTICES SECTION -->
+<div class="container section" id="notices">
+    <h3>Add Notice</h3>
+    <input id="ntitle" placeholder="Notice Title" />
+    <textarea id="ndesc" placeholder="Notice Details"></textarea>
+    <button onclick="addNotice()">Add Notice</button>
+
+    <ul id="noticeList"></ul>
+</div>
+
+<!-- TIME TABLE SECTION -->
+<div class="container section" id="timetable">
+    <h3>Add Time Table Entry</h3>
+    <input id="tday" placeholder="Day" />
+    <input id="tsub" placeholder="Subject" />
+    <button onclick="addTimeTable()">Add Entry</button>
+
+    <table>
+        <thead><tr><th>Day</th><th>Subject</th></tr></thead>
+        <tbody id="timetableTable"></tbody>
+    </table>
+</div>
+
+<!-- STUDY MATERIALS SECTION -->
+<div class="container section" id="materials">
+    <h3>Add Study Material</h3>
+    <input id="mtitle" placeholder="Material Title" />
+    <input id="mlink" placeholder="Resource Link" />
+    <button onclick="addMaterial()">Add Material</button>
+
+    <ul id="materialList"></ul>
+</div>
+
+<script src="studenthub.js"></script>
+</body>
+</html>
