@@ -11,7 +11,7 @@ showSection("assignments"); // default
 
 // ===== STUDENTS =====
 function addStudent() {
-    students.push({ name: sname.value,Roll: sroll.value, course: scourse.value });
+    students.push({ name: sname.value,roll: sroll.value, course: scourse.value });
 sname.value="";
 sroll.value="";
 scourse.value="";
@@ -22,6 +22,7 @@ function updateStudents() {
     studentTable.innerHTML = students.map((s, i) =>
         `<tr>
             <td>${s.name}</td>
+            <td>${s.roll}</td>
             <td>${s.course}</td>
             <td>
                 <button onclick="editStudent(${i})">Edit</button>
@@ -44,7 +45,7 @@ function deleteStudent(i) {
 
 // ===== ATTENDANCE =====
 function addAttendance() {
-    attendance.push({ name: aname.value,Roll: aroll.value, status: astatus.value });
+    attendance.push({ name: aname.value,roll: aroll.value, status: astatus.value });
     aname.value="";
     aroll.value="";
     astatus.value ="";
@@ -54,6 +55,7 @@ function updateAttendance() {
     attendanceTable.innerHTML = attendance.map((a, i) =>
         `<tr>
             <td>${a.name}</td>
+            <td>${a.roll}</td>
             <td>${a.status}</td>
             <td>
                 <button onclick="editAttendance(${i})">Edit</button>
@@ -76,7 +78,7 @@ function deleteAttendance(i) {
 
 // ===== MARKS =====
 function addMarks() {
-    marks.push({ name: mname.value,Roll: aroll.value, subject: msub.value, marks: mmark.value });
+    marks.push({ name: mname.value,roll: aroll.value, subject: msub.value, marks: mmark.value });
     mname.value ="";
     mroll.value="";
     msub.value="";
@@ -87,6 +89,7 @@ function updateMarks() {
     marksTable.innerHTML = marks.map((m, i) =>
         `<tr>
             <td>${m.name}</td>
+            <td>${m.roll}</td>
             <td>${m.subject}</td>
             <td>${m.marks}</td>
             <td>
